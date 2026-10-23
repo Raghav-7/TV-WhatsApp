@@ -155,7 +155,7 @@ public class FamilyActivity extends Activity {
         ImageView logo = new ImageView(this);
         logo.setImageResource(R.drawable.wa_logo);
         bar.addView(logo, new LinearLayout.LayoutParams(dp(34), dp(34)));
-        TextView name = text("WhatsApp Beta", 26, TEXT, false);
+        TextView name = text(getString(R.string.app_name), 26, TEXT, false);
         name.setTypeface(Typeface.create("sans-serif-medium", Typeface.NORMAL));
         name.setPadding(dp(12), 0, 0, 0);
         bar.addView(name);

@@ -1,4 +1,4 @@
-# Copies family.txt and the photos in this folder to the TV's WhatsApp Beta screen.
+# Copies family.txt and the photos in this folder to the Raghav's Whatsapp screen on the TV.
 # Needs ADB debugging on the TV. Usage: .\update-family.ps1 -Tv <TV IP address>
 param([Parameter(Mandatory)][string]$Tv)
 $ErrorActionPreference = 'Stop'
@@ -11,4 +11,4 @@ Get-ChildItem $PSScriptRoot -File | Where-Object { $_.Extension -in '.txt', '.cs
     & $adb -s "${Tv}:5555" push $_.FullName "$dest/$($_.Name)" | Out-Null
     "Copied $($_.Name)"
 }
-"Done. Reopen WhatsApp Beta on the TV to see the changes."
+"Done. Reopen Raghav's Whatsapp on the TV to see the changes."

@@ -75,3 +75,10 @@ no app can use the webcam on that TV.
   android.permission.WRITE_SECURE_SETTINGS`, run by the owner) and let the app re-add its own
   service to `enabled_accessibility_services` if it finds it off.
 - Phone numbers for the family list (owner to provide).
+
+## 2.6 (23-Oct-2026): renamed "WhatsApp Beta" to "Raghav's Whatsapp"
+- The visible name now lives in `wa-tile/res/values/strings.xml` (`app_name`); both manifest labels and the
+  grid header (`FamilyActivity.title()`) read it. Change it there only.
+- Package name `com.family.watile` is unchanged on purpose (a new package would be a new app and switch the
+  call helper off). Internal `beta*` names, comments and the `banner_beta` tile picture are unchanged.
+- Installed over 2.5-beta with `adb install -r`, same keystore; the helper stayed enabled and bound.

@@ -9,13 +9,13 @@ WhatsApp account, plus two small apps of our own:
 
 | App (home-screen tile) | Package | What it does |
 |---|---|---|
-| **WhatsApp Beta** | `com.family.watile` (`wa-tile/`) | A TV-style contact grid (title, search bar, 6-across round avatars with name and number, blue focus outline). Select a person, then **Video call / Voice call / Cancel**; the call goes through WhatsApp and you come back to this screen when it ends. Also contains the **WhatsApp call helper** (an accessibility service, see below). |
+| **Raghav's Whatsapp** (was "WhatsApp Beta" before 2.6) | `com.family.watile` (`wa-tile/`) | A TV-style contact grid (title, search bar, 6-across round avatars with name and number, blue focus outline). Select a person, then **Video call / Voice call / Cancel**; the call goes through WhatsApp and you come back to this screen when it ends. Also contains the **WhatsApp call helper** (an accessibility service, see below). |
 | **WhatsApp** | `com.family.whatsapptile` (`wa-shortcut/`) | Opens normal WhatsApp. WhatsApp's phone app has no TV tile, so this gives it one. |
 
-The **WhatsApp call helper** (inside WhatsApp Beta) only watches WhatsApp's screen:
+The **WhatsApp call helper** (inside Raghav's Whatsapp) only watches WhatsApp's screen:
 1. **Incoming calls:** when a call rings while WhatsApp is open, WhatsApp shows only a small banner. The helper selects it so the full call screen opens; then the remote's **Play/Pause** button answers (WhatsApp treats it as a headset button).
 2. **Opening a chat** from WhatsApp's chat list shows a big Video / Voice / Cancel box instead of the chat.
-3. **Calls from WhatsApp Beta:** opens the person's chat (by number, or by name through WhatsApp's search), presses Video/Voice, and returns to WhatsApp Beta when the call is over, declined, cut or missed.
+3. **Calls from Raghav's Whatsapp:** opens the person's chat (by number, or by name through WhatsApp's search), presses Video/Voice, and returns to Raghav's Whatsapp when the call is over, declined, cut or missed.
 
 It survives TV restarts and app updates. It is switched **off** by Android if the app is **force-stopped**
 (never use `am force-stop com.family.watile`), cleared or reinstalled from scratch.

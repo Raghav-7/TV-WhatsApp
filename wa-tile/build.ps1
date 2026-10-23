@@ -11,7 +11,7 @@ New-Item -ItemType Directory -Force "$out\classes", "$out\dex" | Out-Null
 
 & "$bt\aapt2.exe" compile --dir "$here\res" -o "$out\res.zip"
 & "$bt\aapt2.exe" link -o "$out\base.apk" -I $jar --manifest "$here\AndroidManifest.xml" "$out\res.zip" --java "$out\gen" `
-    --min-sdk-version 23 --target-sdk-version 31 --version-code 10 --version-name 2.5-beta
+    --min-sdk-version 23 --target-sdk-version 31 --version-code 11 --version-name 2.6
 if ($LASTEXITCODE) { throw "aapt2 link failed" }
 
 & javac --release 8 -nowarn -cp $jar -d "$out\classes" (Get-ChildItem "$here\src", "$out\gen" -Recurse -Filter *.java).FullName
