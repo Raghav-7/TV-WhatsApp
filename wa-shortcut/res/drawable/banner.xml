@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TV home-screen banner: WhatsApp logo centred on WhatsApp's dark background. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF0B141A" />
+            <size android:width="320dp" android:height="180dp" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/wa_logo" android:gravity="center" />
+    </item>
+</layer-list>

@@ -1,0 +1,8 @@
+# People on the WhatsApp Beta screen, one per line:   WhatsApp name | number | photo
+# Copy this file to family.txt (family.txt is git-ignored: it holds real names and numbers).
+# - WhatsApp name: exactly as it appears in WhatsApp on the TV (commas and trailing dots are fine)
+# - number: their WhatsApp number (shown on screen; without it, the helper finds them by name)
+# - photo (optional): a .jpg/.png in this folder; without it, a coloured circle with their initial is shown
+Ravi Grandson | 9876543210
+Lakshmi,jio,chennai
+Uncle London | 447700900123 | uncle.jpg

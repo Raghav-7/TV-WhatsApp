@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="helper_name">WhatsApp call helper</string>
+    <string name="helper_description">Makes WhatsApp calls easy with the TV remote. When a call rings while WhatsApp is open, it opens the full call screen so Play/Pause answers. When you open a chat, it shows a big Video call / Voice call / Cancel box. It also places calls started from WhatsApp Beta and brings you back there afterwards. It only looks at WhatsApp\'s screen, stores nothing, and has no internet access.</string>
+</resources>

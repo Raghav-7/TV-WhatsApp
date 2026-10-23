@@ -1,0 +1,13 @@
+# Built apps and the signing key (keep the keystore private; it is needed to update the installed app)
+*.apk
+*.idsig
+*.keystore
+# Real family list and photos
+family/family.txt
+family/*.csv
+family/*.jpg
+family/*.jpeg
+family/*.png
+family/*.webp
+# WhatsApp's logo is extracted locally from WhatsApp's own app file (tools/get-whatsapp-logo.ps1)
+**/wa_logo.webp

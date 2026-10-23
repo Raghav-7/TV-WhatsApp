@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Only receives screen events from WhatsApp; needs view IDs to find the call banner and call buttons.
+     Key events are only observed (never blocked) so remote buttons that leave WhatsApp close the call box. -->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:packageNames="com.whatsapp"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagReportViewIds|flagRequestFilterKeyEvents"
+    android:canRetrieveWindowContent="true"
+    android:canRequestFilterKeyEvents="true"
+    android:notificationTimeout="300"
+    android:description="@string/helper_description" />

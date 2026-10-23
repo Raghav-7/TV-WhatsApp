@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "WhatsApp Beta" tile: the WhatsApp banner with a BETA badge in the corner. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/banner" />
+    <item android:gravity="bottom|end" android:right="14dp" android:bottom="14dp"
+        android:drawable="@drawable/beta_badge" />
+</layer-list>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WhatsApp Beta for the TV: the family call screen plus the WhatsApp call helper.
+     (The TV home screen shows one tile per app, so the plain "WhatsApp" tile is its own app: wa-shortcut.) -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.family.watile">
+
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <queries>
+        <package android:name="com.whatsapp" />
+    </queries>
+
+    <application
+        android:label="WhatsApp Beta"
+        android:icon="@drawable/wa_logo"
+        android:banner="@drawable/banner_beta"
+        android:allowBackup="false">
+
+        <!-- "WhatsApp Beta" tile: family grid; pick a person, then Video or Voice. -->
+        <activity
+            android:name=".FamilyActivity"
+            android:label="WhatsApp Beta"
+            android:banner="@drawable/banner_beta"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Material.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- WhatsApp TV helpers: incoming-call screen, call chooser, grid calls. -->
+        <service
+            android:name=".CallHelperService"
+            android:label="@string/helper_name"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/call_helper" />
+        </service>
+    </application>
+</manifest>
